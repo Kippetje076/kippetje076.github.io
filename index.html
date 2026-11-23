@@ -1,74 +1,214 @@
-<!-- Witte hoofdbalk -->
-<div style="background:white; text-align:center; padding:40px 20px 20px;">
-    <svg width="220" height="70">
-      <rect x="2" y="2" width="216" height="66" rx="16"
-            fill="white" stroke="black" stroke-width="2"/>
-      <path d="M60 3 v16 a4 4 0 0 0 8 0 V3 Z" fill="black"/>
-      <path d="M150 3 v12 a4 4 0 0 0 8 0 V3 Z" fill="black"/>
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <text x="110" y="42" font-size="30" font-weight="bold" text-anchor="middle"
-            fill="black" font-family="Georgia, serif"
-            letter-spacing="4">DRIP</text>
+    <title>Drip House</title>
 
-      <text x="110" y="58" font-size="10" text-anchor="middle"
-            fill="black" font-family="Arial" letter-spacing="7">HOUSE</text>
-    </svg>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    <p style="color:black; font-size:14px; margin:5px;">
-        Style zonder regels.
-    </p>
-</div>
+        body {
+            margin: 0;
+            background: white;
+            color: black;
+            font-family: Arial, sans-serif;
+        }
 
-<!-- Nav balk eronder -->
-<nav style="background:#e8e8e8; text-align:center; padding:15px;
-                    position:sticky; top:0; z-index:100;">
-    <a href="#" style="color:black; margin:0 15px; text-decoration:none;">Heren</a>
-    <a href="#" style="color:black; margin:0 15px; text-decoration:none;">Dames</a>
-    <a href="#" style="color:black; margin:0 15px; text-decoration:none;">Kids</a>
-    <a href="#" style="color:black; margin:0 15px; text-decoration:none;">Sport</a>
-</nav>
+        .header {
+            background: white;
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
 
-<div style="background:white; padding:40px 20px; display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+        .header p {
+            color: black;
+            font-size: 14px;
+            margin: 5px;
+        }
 
-    <!-- VAK 1 -->
-    <div style="background:#f5f5f5; width:200px; border-radius:12px; overflow:hidden; border:1px solid #ccc;">
-        <img src="hoodie.jpg" alt="Hoodie Regular Wit Kids"
-             style="width:100%; height:180px; object-fit:cover;">
+        .navigation {
+            background: #e8e8e8;
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-        <p style="color:black; text-align:center; padding:10px; margin:0;">
-            Hoodie Kids - €29,95
-        </p>
-    </div>
+        .navigation a {
+            color: black;
+            margin: 0 15px;
+            text-decoration: none;
+        }
 
-    <!-- VAK 2 -->
-    <div style="background:#f5f5f5; width:200px; border-radius:12px; overflow:hidden; border:1px solid #ccc;">
-        <img src="product2.jpg" alt="Product 2"
-             style="width:100%; height:180px; object-fit:cover;">
+        .navigation a:hover {
+            text-decoration: underline;
+        }
 
-        <p style="color:black; text-align:center; padding:10px; margin:0;">
-            Product
-        </p>
-    </div>
+        .products {
+            background: white;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
 
-    <!-- VAK 3 -->
-    <div style="background:#f5f5f5; width:200px; border-radius:12px; overflow:hidden; border:1px solid #ccc;">
-        <img src="product3.jpg" alt="Product 3"
-             style="width:100%; height:180px; object-fit:cover;">
+        .product-card {
+            background: #f5f5f5;
+            width: 200px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+        }
 
-        <p style="color:black; text-align:center; padding:10px; margin:0;">
-            hier tekst
-        </p>
-    </div>
+        .product-card img {
+            display: block;
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
 
-    <!-- VAK 4 -->
-    <div style="background:#f5f5f5; width:200px; border-radius:12px; overflow:hidden; border:1px solid #ccc;">
-        <img src="product4.jpg" alt="Product 4"
-             style="width:100%; height:180px; object-fit:cover;">
+        .product-card p {
+            color: black;
+            text-align: center;
+            padding: 10px;
+            margin: 0;
+        }
 
-        <p style="color:black; text-align:center; padding:10px; margin:0;">
-            Product 4
-        </p>
-    </div>
+        @media (max-width: 600px) {
+            .navigation a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
 
-</div>
+            .product-card {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+    </style>
+</head>
 
+<body>
+
+    <!-- Witte hoofdbalk -->
+    <header class="header">
+        <svg width="220" height="70" role="img" aria-label="Drip House logo">
+            <rect
+                x="2"
+                y="2"
+                width="216"
+                height="66"
+                rx="16"
+                fill="white"
+                stroke="black"
+                stroke-width="2"
+            />
+
+            <path
+                d="M60 3 v16 a4 4 0 0 0 8 0 V3 Z"
+                fill="black"
+            />
+
+            <path
+                d="M150 3 v12 a4 4 0 0 0 8 0 V3 Z"
+                fill="black"
+            />
+
+            <text
+                x="110"
+                y="42"
+                font-size="30"
+                font-weight="bold"
+                text-anchor="middle"
+                fill="black"
+                font-family="Georgia, serif"
+                letter-spacing="4"
+            >
+                DRIP
+            </text>
+
+            <text
+                x="110"
+                y="58"
+                font-size="10"
+                text-anchor="middle"
+                fill="black"
+                font-family="Arial, sans-serif"
+                letter-spacing="7"
+            >
+                HOUSE
+            </text>
+        </svg>
+
+        <p>Style zonder regels.</p>
+    </header>
+
+    <!-- Navigatiebalk -->
+    <nav class="navigation" aria-label="Hoofdnavigatie">
+        <a href="#heren">Heren</a>
+        <a href="#dames">Dames</a>
+        <a href="#kids">Kids</a>
+        <a href="#sport">Sport</a>
+    </nav>
+
+    <!-- Producten -->
+    <main class="products">
+
+        <!-- Vak 1 -->
+        <article class="product-card" id="kids">
+            <img
+                src="hoodie.jpg"
+                alt="Witte kinderhoodie"
+            >
+
+            <p>
+                Hoodie Kids - €29,95
+            </p>
+        </article>
+
+        <!-- Vak 2 -->
+        <article class="product-card">
+            <img
+                src="product2.jpg"
+                alt="Product 2"
+            >
+
+            <p>
+                Product
+            </p>
+        </article>
+
+        <!-- Vak 3 -->
+        <article class="product-card">
+            <img
+                src="product3.jpg"
+                alt="Product 3"
+            >
+
+            <p>
+                Hier tekst
+            </p>
+        </article>
+
+        <!-- Vak 4 -->
+        <article class="product-card">
+            <img
+                src="product4.jpg"
+                alt="Product 4"
+            >
+
+            <p>
+                Product 4
+            </p>
+        </article>
+
+    </main>
+
+</body>
+</html>
