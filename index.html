@@ -59,10 +59,22 @@
         .products {
             background: white;
             padding: 40px 20px;
-            display: flex;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(2, 200px);
             gap: 20px;
-            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .divider {
+            background: #e8e8e8;
+            height: 50px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 30px 0 0;
         }
 
         .product-card {
@@ -93,9 +105,10 @@
                 margin: 5px 8px;
             }
 
-            .product-card {
-                width: 100%;
+            .products {
+                grid-template-columns: 1fr;
                 max-width: 280px;
+                margin: 0 auto;
             }
         }
     </style>
@@ -158,69 +171,80 @@
 
     <!-- Navigatiebalk -->
     <nav class="navigation" aria-label="Hoofdnavigatie">
+      <a href="#sport">Home</a>
         <a href="#heren">Heren</a>
-        <a href="#dames">Dames</a>
         <a href="#kids">Kids</a>
         <a href="#sport">Sport</a>
-    </nav>
+  <nav>
 
     <!-- Titel onder de navigatie -->
     <h2 class="new-title">Nieuw!</h2>
 
-    <!-- Producten -->
-    <main class="products">
+    <!-- Eerste rij producten (2 naast elkaar) -->
+    <main>
+        <section class="products">
 
-        <!-- Vak 1 -->
-        <article class="product-card" id="kids">
-            <img
-                src="hoodie.jpg"
-                alt="Witte kinderhoodie"
-            >
+            <!-- Vak 1 -->
+            <article class="product-card" id="kids">
+                <img src="hoodie.jpg" alt="Witte kinderhoodie">
+                <p>Witte Hoodie Kids - €29,95</p>
+            </article>
 
-            <p>
-                Hoodie Kids - €29,95
-            </p>
-        </article>
+            <!-- Vak 2 -->
+            <article class="product-card">
+                <img src="product2.jpg" alt="Product 2">
+                <p></p>
+            </article>
 
-        <!-- Vak 2 -->
-        <article class="product-card">
-            <img
-                src="product2.jpg"
-                alt="Product 2"
-            >
+            <!-- Vak 3 -->
+            <article class="product-card">
+                <img src="product3.jpg" alt="Product 3">
+                <p>product$</p>
+            </article>
 
-            <p>
-                Product
-            </p>
-        </article>
+            <!-- Vak 4 -->
+            <article class="product-card">
+                <img src="product4.jpg" alt="Product 4">
+                <p>Product 4</p>
+            </article>
 
-        <!-- Vak 3 -->
-        <article class="product-card">
-            <img
-                src="product3.jpg"
-                alt="Product 3"
-            >
+        </section>
 
-            <p>
-                Hier tekst
-            </p>
-        </article>
+        <!-- Grijze balk, zelfde kleur als de nav -->
+        <div class="divider"></div>
 
-        <!-- Vak 4 -->
-        <article class="product-card">
-            <img
-                src="product4.jpg"
-                alt="Product 4"
-            >
+        <!-- Titel onder de balk, boven de laatste producten -->
+        <h2 class="section-title">BLACK FRIDAY!</h2>
 
-            <p>
-                Product 4
-            </p>
-        </article>
+        <!-- Tweede rij producten (2 naast elkaar) -->
+        <section class="products">
 
+            <!-- Vak 5 -->
+            <article class="product-card">
+                <img src="product5.jpg" alt="Product 5">
+                <p>Product 5</p>
+            </article>
+
+            <!-- Vak 6 -->
+            <article class="product-card">
+                <img src="product6.jpg" alt="Product 6">
+                <p>Product 6</p>
+            </article>
+
+            <!-- Vak 7 -->
+            <article class="product-card">
+                <img src="product7.jpg" alt="Product 7">
+                <p>Product 7</p>
+            </article>
+
+            <!-- Vak 8 -->
+            <article class="product-card">
+                <img src="product8.jpg" alt="Product 8">
+                <p>Product 8</p>
+            </article>
+
+        </section>
     </main>
 
 </body>
 </html>
-
-
