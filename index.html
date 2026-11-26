@@ -53,7 +53,8 @@
             text-decoration: underline;
         }
 
-        .new-title {
+        .new-title,
+        .section-title {
             text-align: center;
             font-size: 28px;
             font-weight: bold;
@@ -64,28 +65,20 @@
             background: white;
             padding: 40px 20px 20px;
             display: grid;
-            grid-template-columns: repeat(2, 200px);
-            gap: 20px;
+            grid-template-columns: repeat(2, 300px);
+            gap: 30px;
             justify-content: center;
         }
 
-        /* Deze balk is even hoog als de navigatiebalk */
         .divider {
             background: #e8e8e8;
             height: 48px;
             margin: 0;
         }
 
-        .section-title {
-            text-align: center;
-            font-size: 28px;
-            font-weight: bold;
-            margin: 30px 0 0;
-        }
-
         .product-card {
             background: #f5f5f5;
-            width: 200px;
+            width: 300px;
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid #ccc;
@@ -94,7 +87,7 @@
         .product-card img {
             display: block;
             width: 100%;
-            height: 180px;
+            height: 270px;
             object-fit: cover;
         }
 
@@ -105,7 +98,7 @@
             margin: 0;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
             .navigation {
                 height: auto;
                 min-height: 48px;
@@ -118,13 +111,9 @@
                 margin: 5px 8px;
             }
 
-            .divider {
-                height: 48px;
-            }
-
             .products {
                 grid-template-columns: 1fr;
-                max-width: 280px;
+                max-width: 300px;
                 margin: 0 auto;
                 padding: 30px 0 15px;
             }
@@ -132,13 +121,16 @@
             .product-card {
                 width: 100%;
             }
+
+            .product-card img {
+                height: 270px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Witte hoofdbalk -->
     <header class="header">
         <svg width="220" height="70" role="img" aria-label="Drip House logo">
             <rect
@@ -191,7 +183,6 @@
         <p>Style zonder regels.</p>
     </header>
 
-    <!-- Navigatiebalk -->
     <nav class="navigation" aria-label="Hoofdnavigatie">
         <a href="#home">Home</a>
         <a href="#heren">Heren</a>
@@ -199,33 +190,27 @@
         <a href="#sport">Sport</a>
     </nav>
 
-    <!-- Titel onder de navigatie -->
     <h2 class="new-title">NIEUW!</h2>
 
     <main>
 
-        <!-- Eerste productsectie -->
         <section class="products" id="home">
 
-            <!-- Vak 1 -->
             <article class="product-card" id="kids">
                 <img src="hoodie.jpg" alt="Witte kinderhoodie">
                 <p>Witte Hoodie Kids - €29,95</p>
             </article>
 
-            <!-- Vak 2 -->
             <article class="product-card">
                 <img src="product2.jpg" alt="Product 2">
                 <p>Product 2</p>
             </article>
 
-            <!-- Vak 3 -->
             <article class="product-card">
                 <img src="product3.jpg" alt="Product 3">
                 <p>Product 3</p>
             </article>
 
-            <!-- Vak 4 -->
             <article class="product-card">
                 <img src="product4.jpg" alt="Product 4">
                 <p>Product 4</p>
@@ -233,34 +218,27 @@
 
         </section>
 
-        <!-- Grijze balk, even hoog als de navigatiebalk -->
         <div class="divider"></div>
 
-        <!-- Titel boven de tweede productsectie -->
         <h2 class="section-title">BLACK FRIDAY!</h2>
 
-        <!-- Tweede productsectie -->
         <section class="products" id="sport">
 
-            <!-- Vak 5 -->
             <article class="product-card">
                 <img src="product5.jpg" alt="Product 5">
                 <p>Product 5</p>
             </article>
 
-            <!-- Vak 6 -->
             <article class="product-card">
                 <img src="product6.jpg" alt="Product 6">
                 <p>Product 6</p>
             </article>
 
-            <!-- Vak 7 -->
             <article class="product-card">
                 <img src="product7.jpg" alt="Product 7">
                 <p>Product 7</p>
             </article>
 
-            <!-- Vak 8 -->
             <article class="product-card">
                 <img src="product8.jpg" alt="Product 8">
                 <p>Product 8</p>
@@ -272,4 +250,5 @@
 
 </body>
 </html>
+
 
